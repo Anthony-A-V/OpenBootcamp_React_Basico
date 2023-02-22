@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import Ejemplo4 from './hooks/Ejemplo4';
+import GreetingStyled from './components/pure/greetingStyled';
+// import Ejemplo4 from './hooks/Ejemplo4';
 // import TaskListComponent from './components/container/task_list';
 // import Ejemplo1 from './hooks/Ejemplo1';
 // import Ejemplo2 from './hooks/Ejemplo2';
@@ -23,10 +24,11 @@ function App() {
         {/* <Ejemplo1></Ejemplo1> */}
         {/* <Ejemplo2></Ejemplo2> */}
         {/* <MiComponenteConContexto></MiComponenteConContexto> */}
-        <Ejemplo4 nombre="Anthony">
-          {/* Todo lo que hay aquí, es tratado como props.children */}
+        {/* Todo lo que hay aquí, es tratado como props.children */}
+        {/* <Ejemplo4 nombre="Anthony">
           <h3>Contenido del props.children</h3>
-        </Ejemplo4>
+        </Ejemplo4> */}
+        <GreetingStyled name="Anthony"></GreetingStyled>
       </header>
     </div>
   );
