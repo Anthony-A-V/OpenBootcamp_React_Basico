@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
+import Father from './components/container/father';
 // import GreetingStyled from './components/pure/greetingStyled';
 // import Ejemplo4 from './hooks/Ejemplo4';
 import TaskListComponent from './components/container/task_list';
@@ -30,6 +31,9 @@ function App() {
         </Ejemplo4> */}
       {/* <GreetingStyled name="Anthony"></GreetingStyled> */}
       {/* </header> */}
+      {/* Gestión de eventos */}
+      {/* <Father></Father> */}
+      {/* Proyecto Final */}
       <TaskListComponent></TaskListComponent>
     </div>
   );
