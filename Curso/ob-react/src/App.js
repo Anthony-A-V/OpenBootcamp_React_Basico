@@ -4,6 +4,7 @@ import Father from './components/container/father';
 // import GreetingStyled from './components/pure/greetingStyled';
 // import Ejemplo4 from './hooks/Ejemplo4';
 import TaskListComponent from './components/container/task_list';
+import OptionalRender from './components/pure/optionalRender';
 // import Ejemplo1 from './hooks/Ejemplo1';
 // import Ejemplo2 from './hooks/Ejemplo2';
 // import MiComponenteConContexto from './hooks/Ejemplo3';
@@ -33,8 +34,10 @@ function App() {
       {/* </header> */}
       {/* Gestión de eventos */}
       {/* <Father></Father> */}
+      {/* Ejemplo de Renderizado condiciona */}
+      <OptionalRender></OptionalRender>
       {/* Proyecto Final */}
-      <TaskListComponent></TaskListComponent>
+      {/* <TaskListComponent></TaskListComponent> */}
     </div>
   );
 }
