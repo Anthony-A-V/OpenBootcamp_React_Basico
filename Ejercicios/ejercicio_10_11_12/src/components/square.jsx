@@ -2,27 +2,40 @@ import React, { useState } from "react";
 import "./square.css";
 
 const Square = () => {
-  const [color, setColor] = useState({ backgroundColor: "black" });
+  const [color, setColor] = useState("black");
+  const [manageInterval, setManageInterval] = useState(0);
+
+  function randomInteger(max) {
+    return Math.floor(Math.random() * (max + 1));
+  }
+
+  function randomRgbColor() {
+    let r = randomInteger(255);
+    let g = randomInteger(255);
+    let b = randomInteger(255);
+    return [r, g, b];
+  }
+
+  function randomHexColor() {
+    let [r, g, b] = randomRgbColor();
+
+    let hr = r.toString(16).padStart(2, "0");
+    let hg = g.toString(16).padStart(2, "0");
+    let hb = b.toString(16).padStart(2, "0");
+
+    return "#" + hr + hg + hb;
+  }
 
   const changeColorIn = () => {
-    let o = Math.round,
-      r = Math.random,
-      s = 255;
-    let color =
-      "rgba(" +
-      o(r() * s) +
-      "," +
-      o(r() * s) +
-      "," +
-      o(r() * s) +
-      "," +
-      r().toFixed(1) +
-      ")";
-    setColor({ backgroundColor: color });
+    return setManageInterval(
+      setInterval(() => {
+        setColor(randomHexColor);
+      }, 500)
+    );
   };
 
   const changeColorOut = () => {
-    setColor({ backgroundColor: backgroundColor });
+    return clearInterval(manageInterval);
   };
 
   return (
@@ -32,9 +45,10 @@ const Square = () => {
         onMouseOver={changeColorIn}
         onMouseLeave={changeColorOut}
         onDoubleClick={changeColorOut}
-        style={color}
-        class="square"
+        style={{ backgroundColor: color }}
+        className="square"
       ></div>
+      <p style={{ color: "black" }}>Color: {color} </p>
     </div>
   );
 };

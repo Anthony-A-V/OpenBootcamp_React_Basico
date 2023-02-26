@@ -4,7 +4,7 @@ import { LEVELS } from '../../../models/levels.enum';
 import { Task } from '../../../models/task.class';
 import 'bootstrap/dist/css/bootstrap.css';
 
-const TaskForm = ({ add }) => {
+const TaskForm = ({ add, length }) => {
   const nameRef = useRef('');
   const descriptionRef = useRef('');
   const levelRef = useRef(LEVELS.NORMAL);
@@ -19,6 +19,21 @@ const TaskForm = ({ add }) => {
     );
     add(newTask);
   }
+
+  const normalStyle = {
+    color: 'blue',
+    fontWeight: 'bold',
+  };
+
+  const urgentStyle = {
+    color: 'yellow',
+    fontWeight: 'bold',
+  };
+
+  const blockingStyle = {
+    color: 'tomato',
+    fontWeight: 'bold',
+  };
 
   return (
     <form onSubmit={addTask} className="d-flex justify-content-center align-items-center mb-4">
@@ -40,24 +55,33 @@ const TaskForm = ({ add }) => {
           required
           placeholder="Task Description"
         />
-        <label htmlFor="selectLevel" className="sr-only">
-          Priority
-        </label>
-        <select ref={levelRef} defaultValue={LEVELS.NORMAL} id="selectLevel">
-          <option value={LEVELS.NORMAL}>Normal</option>
-          <option value={LEVELS.URGENT}>Urgent</option>
-          <option value={LEVELS.BLOCKING}>Blocking</option>
+        <select
+          className="form-control form-control-lg"
+          ref={levelRef}
+          defaultValue={LEVELS.NORMAL}
+          id="selectLevel"
+        >
+          <option style={normalStyle} value={LEVELS.NORMAL}>
+            Normal
+          </option>
+          <option style={urgentStyle} value={LEVELS.URGENT}>
+            Urgent
+          </option>
+          <option style={blockingStyle} value={LEVELS.BLOCKING}>
+            Blocking
+          </option>
         </select>
+        <button type="submit" className="btn btn-success btn-lg ms-2">
+          {length > 0 ? 'Add New Task' : 'Create your First Task'}
+        </button>
       </div>
-      <button type="submit" className="btn btn-success btn-lg ms-2">
-        Add
-      </button>
     </form>
   );
 };
 
 TaskForm.propTypes = {
   add: PropTypes.func.isRequired,
+  lenght: PropTypes.number.isRequired,
 };
 
 export default TaskForm;
