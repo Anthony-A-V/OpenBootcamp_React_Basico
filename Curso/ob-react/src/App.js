@@ -5,6 +5,7 @@ import './App.css';
 // import Ejemplo4 from './hooks/Ejemplo4';
 import TaskListComponent from './components/container/task_list';
 import LoginFormik from './components/pure/forms/loginFormik';
+import RegisterFormik from './components/pure/forms/registerFormik';
 // import OptionalRender from './components/pure/optionalRender';
 // import Ejemplo1 from './hooks/Ejemplo1';
 // import Ejemplo2 from './hooks/Ejemplo2';
@@ -40,7 +41,8 @@ function App() {
       {/* <OptionalRender></OptionalRender> */}
 
       {/* Ejemplos de uso de Formik y Yup */}
-      <LoginFormik></LoginFormik>
+      {/* <LoginFormik></LoginFormik> */}
+      <RegisterFormik></RegisterFormik>
 
       {/* Proyecto Final */}
       {/* <TaskListComponent></TaskListComponent> */}
