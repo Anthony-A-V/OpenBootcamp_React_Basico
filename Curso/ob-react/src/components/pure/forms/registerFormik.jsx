@@ -27,6 +27,7 @@ const RegisterFormik = () => {
       .oneOf([ROLES.USER, ROLES.ADMIN], 'You must select a Role: User / Admin')
       .required('Role is required'),
     password: Yup.string().min(8, 'Password too short').required('Password is required'),
+    // ? Forma que sí funciona actualmente en Yup
     confirm: Yup.string()
       .oneOf([Yup.ref('password')], 'Passwords must match')
       .required('You must confirm the password'),
