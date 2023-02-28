@@ -81,7 +81,7 @@ const TaskForm = ({ add, length }) => {
 
 TaskForm.propTypes = {
   add: PropTypes.func.isRequired,
-  lenght: PropTypes.number.isRequired,
+  length: PropTypes.number.isRequired,
 };
 
 export default TaskForm;
