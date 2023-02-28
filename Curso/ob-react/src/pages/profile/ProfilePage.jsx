@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const HomePage = () => {
+const ProfilePage = ({ user }) => {
   const navigate = useNavigate();
 
   const goBack = () => {
@@ -13,12 +13,11 @@ const HomePage = () => {
   };
   return (
     <div>
-      <h1>Home Page</h1>
-      <button onClick={() => navigate('/profile')}>Go To Profile</button>
+      <h1>Your Profile</h1>
+      <button onClick={() => navigate('/tasks')}>Tasks</button>
       <button onClick={goBack}>Go Back</button>
-      <button onClick={goForward}>Go Forward</button>
     </div>
   );
 };
 
-export default HomePage;
+export default ProfilePage;
