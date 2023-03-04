@@ -5,7 +5,7 @@ import DashBoardPage from './pages/dashboard/DashBoardPage';
 
 function AppRoutingOne() {
   // TODO Change to value from sessionStorage (or something dinamic)
-  let loggedIn = false;
+  let loggedIn = true;
 
   return (
     <div>

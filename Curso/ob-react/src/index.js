@@ -6,8 +6,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 // ! Importante: Los estilos propios, deben ir debajo de Bootstrap para que no lo pise.
 import './index.css';
+// eslint-disable-next-line no-unused-vars
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// eslint-disable-next-line no-unused-vars
 import AppRoutingOne from './AppRoutingOne';
 import AppRoutingFinal from './AppRoutingFinal';
 

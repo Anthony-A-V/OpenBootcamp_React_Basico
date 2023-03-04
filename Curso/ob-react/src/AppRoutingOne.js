@@ -26,6 +26,7 @@ function AppRoutingOne() {
   ];
 
   useEffect(() => {
+    // eslint-disable-next-line
     logged = localStorage.getItem('credentials');
     console.log('User Logged?', logged);
   }, []);

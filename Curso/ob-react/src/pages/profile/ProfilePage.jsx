@@ -16,6 +16,7 @@ const ProfilePage = ({ user }) => {
       <h1>Your Profile</h1>
       <button onClick={() => navigate('/tasks')}>Tasks</button>
       <button onClick={goBack}>Go Back</button>
+      <button onClick={goForward}>Go Forward</button>
     </div>
   );
 };

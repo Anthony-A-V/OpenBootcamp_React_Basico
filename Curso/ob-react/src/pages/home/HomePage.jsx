@@ -22,15 +22,15 @@ const HomePage = ({ logged }) => {
     navigate(-1);
   };
 
+  const goForward = () => {
+    navigate(1);
+  };
+
   const redirect = () => {
     if (!logged) {
       alert('You must be logged in. Redirecting to login...');
     }
     navigate('/profile');
-  };
-
-  const goForward = () => {
-    navigate(1);
   };
   return (
     <div>
@@ -39,8 +39,8 @@ const HomePage = ({ logged }) => {
         Go To Page with State / Query Params
       </button>
       <button onClick={redirect}>Go To Profile</button>
-      {/* <button onClick={goBack}>Go Back</button>
-      <button onClick={goForward}>Go Forward</button> */}
+      <button onClick={goBack}>Go Back</button>
+      <button onClick={goForward}>Go Forward</button>
     </div>
   );
 };
