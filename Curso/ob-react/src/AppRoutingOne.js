@@ -64,7 +64,7 @@ function AppRoutingOne() {
                 element={logged ? <ProfilePage /> : <Navigate replace to="/login" />}
               />
               <Route path="/tasks" element={<TasksPage />} />
-              <Route path="/task/:id" element={<TaskDetailPage task={taskList[0]} />} />
+              <Route path="/task/:id" element={<TaskDetailPage taskList={taskList} />} />
               {/* 404 - Page Not Found */}
               <Route path="*" element={<NotFoundPage />} />
             </Routes>

@@ -1,8 +1,9 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-const TaskDetailPage = ({ task }) => {
+const TaskDetailPage = ({ taskList }) => {
   const { id } = useParams();
+  const task = taskList.find((task) => task.id === parseInt(id));
 
   return (
     <div>
