@@ -9,9 +9,11 @@ import TaskDetailPage from './pages/tasks/TaskDetailPage';
 import LoginPage from './pages/auth/LoginPage';
 import { useEffect } from 'react';
 import StatePage from './pages/home/StatePage';
+import Register from './pages/auth/Register';
 
 function AppRoutingOne() {
   let logged = false;
+
   let taskList = [
     {
       id: 1,
@@ -48,6 +50,7 @@ function AppRoutingOne() {
             >
               | Login |{' '}
             </Link>
+            <Link to="/register"> | Register | </Link>
           </aside>
 
           <main>
@@ -58,14 +61,18 @@ function AppRoutingOne() {
                 path="/login"
                 element={logged ? <Navigate replace to="/" /> : <LoginPage />}
               ></Route>
+              <Route path="/register" element={<Register />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/faqs" element={<AboutPage />} />
               <Route
                 path="/profile"
                 element={logged ? <ProfilePage /> : <Navigate replace to="/login" />}
               />
-              <Route path="/tasks" element={<TasksPage />} />
-              <Route path="/task/:id" element={<TaskDetailPage taskList={taskList} />} />
+              <Route path="/tasks" element={<TasksPage logged={logged} />} />
+              <Route
+                path="/task/:id"
+                element={<TaskDetailPage taskList={taskList} logged={logged} />}
+              />
               {/* 404 - Page Not Found */}
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
