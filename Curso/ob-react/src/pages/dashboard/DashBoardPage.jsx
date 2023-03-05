@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
-import Copyright from '../../components/pure/forms/Copyright';
+import Copyright from '../../components/pure/Copyright';
 
 const DashBoardPage = () => {
   const navigate = useNavigate();

@@ -1,5 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
+import AsyncExample from './components/pure/AsyncExample';
+import ObservableExample from './components/pure/ObservableExample';
 // import Father from './components/container/father';
 // import GreetingStyled from './components/pure/greetingStyled';
 // import Ejemplo4 from './hooks/Ejemplo4';
@@ -44,6 +46,9 @@ function App() {
       {/* <LoginFormik></LoginFormik> */}
       {/* <RegisterFormik></RegisterFormik> */}
 
+      {/* Ejemplos de procesos asíncronos */}
+      {/* <AsyncExample /> */}
+      <ObservableExample />
       {/* Proyecto Final */}
       {/* <TaskListComponent></TaskListComponent> */}
     </div>

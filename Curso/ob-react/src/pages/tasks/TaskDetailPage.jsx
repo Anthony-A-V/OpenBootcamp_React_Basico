@@ -15,6 +15,19 @@ const TaskDetailPage = ({ taskList, logged }) => {
   ) : (
     <Navigate to="/login" replace />
   );
+  // ? Otra forma condicional en el caso se requiera renderizar dentro de un div
+  // ? Se pueden usar los "fragmentos" de React para envoler el html
+  // <div>
+  //   {logged ? (
+  //     <>
+  //       <h1>Task Detail - {id}</h1>
+  //       <h2>{task.name}</h2>
+  //       <h3>{task.description}</h3>
+  //     </>
+  //   ) : (
+  //     <Navigate to="/login" replace />
+  //   )}
+  // </div>;
 };
 
 export default TaskDetailPage;
