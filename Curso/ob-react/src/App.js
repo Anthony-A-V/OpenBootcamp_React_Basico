@@ -2,6 +2,8 @@
 import './App.css';
 import AsyncExample from './components/pure/AsyncExample';
 import ObservableExample from './components/pure/ObservableExample';
+import FetchExample from './components/pure/FetchExample';
+import AxiosExample from './components/pure/AxiosExample';
 // import Father from './components/container/father';
 // import GreetingStyled from './components/pure/greetingStyled';
 // import Ejemplo4 from './hooks/Ejemplo4';
@@ -48,7 +50,9 @@ function App() {
 
       {/* Ejemplos de procesos asíncronos */}
       {/* <AsyncExample /> */}
-      <ObservableExample />
+      {/* <ObservableExample /> */}
+      {/* <FetchExample />  */}
+      <AxiosExample />
       {/* Proyecto Final */}
       {/* <TaskListComponent></TaskListComponent> */}
     </div>
