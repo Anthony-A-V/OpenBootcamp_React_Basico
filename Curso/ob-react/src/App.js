@@ -1,9 +1,10 @@
 // import logo from './logo.svg';
 import './App.css';
-import AsyncExample from './components/pure/AsyncExample';
-import ObservableExample from './components/pure/ObservableExample';
-import FetchExample from './components/pure/FetchExample';
-import AxiosExample from './components/pure/AxiosExample';
+// import AsyncExample from './components/pure/AsyncExample';
+// import ObservableExample from './components/pure/ObservableExample';
+// import FetchExample from './components/pure/FetchExample';
+// import AxiosExample from './components/pure/AxiosExample';
+import AxiosCRUDExample from './components/pure/AxiosCRUDExample';
 // import Father from './components/container/father';
 // import GreetingStyled from './components/pure/greetingStyled';
 // import Ejemplo4 from './hooks/Ejemplo4';
@@ -52,7 +53,8 @@ function App() {
       {/* <AsyncExample /> */}
       {/* <ObservableExample /> */}
       {/* <FetchExample />  */}
-      <AxiosExample />
+      {/* <AxiosExample /> */}
+      <AxiosCRUDExample />
       {/* Proyecto Final */}
       {/* <TaskListComponent></TaskListComponent> */}
     </div>

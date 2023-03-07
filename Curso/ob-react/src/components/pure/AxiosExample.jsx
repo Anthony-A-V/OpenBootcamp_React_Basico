@@ -4,9 +4,9 @@ import { getRandomUser } from '../../services/axiosService';
 const AxiosExample = () => {
   const [user, setUser] = useState(null);
 
-  // useEffect(() => {
-  //   obtainUser();
-  // }, []);
+  useEffect(() => {
+    obtainUser();
+  }, []);
 
   const obtainUser = () => {
     getRandomUser()
@@ -24,7 +24,7 @@ const AxiosExample = () => {
   return (
     <div>
       <h1>Axios Example</h1>
-      {user != null ? (
+      {user !== null ? (
         <div>
           <img src={user.picture.large} alt="avatar" />
           <h2>
@@ -32,12 +32,11 @@ const AxiosExample = () => {
           </h2>
           <h3>{user.email}</h3>
         </div>
-      ) : (
-        <div>
-          <p>Generate a new User</p>
-          <button onClick={obtainUser}>Random User</button>
-        </div>
-      )}
+      ) : null}
+      <div>
+        <p>Generate a new User</p>
+        <button onClick={obtainUser}>Random User</button>
+      </div>
     </div>
   );
 };

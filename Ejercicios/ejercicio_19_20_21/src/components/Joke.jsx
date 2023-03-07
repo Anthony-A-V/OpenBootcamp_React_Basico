@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { getRandomJoke } from "../services/axiosService";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
+import ThumbUpIcon from "@mui/icons-material/ThumbUp";
+import ThumbDownIcon from "@mui/icons-material/ThumbDown";
 
 const Joke = () => {
   const [joke, setJoke] = useState(null);
@@ -71,6 +73,7 @@ const Joke = () => {
           variant={like ? "contained" : "outlined"}
           color="success"
           onClick={handleLike}
+          startIcon={<ThumbUpIcon />}
         >
           Like
         </Button>
@@ -78,6 +81,7 @@ const Joke = () => {
           variant={dislike ? "contained" : "outlined"}
           color="error"
           onClick={handleDislike}
+          startIcon={<ThumbDownIcon />}
         >
           Dislike
         </Button>
