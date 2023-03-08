@@ -1,8 +1,7 @@
-// Initial TodosState
-
 import { ADD_TODO, TOGGLE_TODO } from '../actions/actions';
 
-// Initialy Todos is empty
+// Initial TodosState
+// Initialy todos is empty
 let initialState = [];
 
 export const todosReducer = (state = initialState, action) => {
@@ -17,14 +16,14 @@ export const todosReducer = (state = initialState, action) => {
         },
       ];
     case TOGGLE_TODO:
-      return state.map((todo) => {
+      return state.map((todo) =>
         todo.id === action.payload.id
           ? {
               ...todo,
               completed: !todo.completed,
             }
-          : todo;
-      });
+          : todo,
+      );
 
     default:
       return state;
