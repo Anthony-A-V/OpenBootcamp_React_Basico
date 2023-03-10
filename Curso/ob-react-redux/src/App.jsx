@@ -8,6 +8,7 @@ function App() {
     <div className="App">
       <TodosContainer />
       <TodoFormContainer />
+      {/* Filter Options contain Filter Container */}
       <Filteroptions />
     </div>
   );
