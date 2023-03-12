@@ -20,8 +20,8 @@ let appAsyncStore = createAppAsyncStore();
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Provider store={appAsyncStore}>
     <React.StrictMode>
-      {/* <App /> */}
-      <AppReduxSaga />
+      <App />
+      {/* <AppReduxSaga /> */}
     </React.StrictMode>
   </Provider>,
 );
